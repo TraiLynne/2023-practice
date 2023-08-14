@@ -216,7 +216,6 @@ function binarySearch(arr, val) {
  *    Auxiliary Space Complexity: O(n!)
  
  Grade: +1 
- 
  Notes: the aux space is O(n). It is still evenly based on the size of the input.
  */
 
@@ -302,7 +301,8 @@ function printUnorderedPairs(array) {
  *  Time Complexity: O(n * m)
  *  Auxiliary Space Complexity: O(n + m)
  
- Grade: +1 (the aux space is also O(MN))
+ Grade: +1 
+ Notes: the aux space is also O(MN)
  */
 
 function makeCombinedMatrix(arr1, arr2) {
