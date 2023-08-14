@@ -14,16 +14,18 @@ Order of Magnitude
 
 Reduce the following into it's Big-O order of magnitude.
 
-1. 5 + N                    Answer:
-2. N + N^2                  Answer:
-3. 15N + 13N                Answer:
-4. 10000                    Answer:
-5. log(N) + 1               Answer:
-6. log(N) * 3 + 14N + 3     Answer:
-7. Nlog(N) + 3N^2           Answer:
-8. N^3 + log(N^4)           Answer:
-9. N! + 180000N^2           Answer:
-10. 15002^N                 Answer:
+1. 5 + N                    Answer: O(n)
+2. N + N^2                  Answer: O(n^2)
+3. 15N + 13N                Answer: O(n)
+4. 10000                    Answer: O(1)
+5. log(N) + 1               Answer: O(log n)
+6. log(N) * 3 + 14N + 3     Answer: O(n)
+7. Nlog(N) + 3N^2           Answer: O(n^2)
+8. N^3 + log(N^4)           Answer: O(n^3)
+9. N! + 180000N^2           Answer: O(n!)
+10. 15002^N                 Answer: O(c^n)
+
+Grade: +10
 
 */
 
@@ -47,8 +49,10 @@ Reduce the following into it's Big-O order of magnitude.
  *     [9, 83, 74], 8 --> -1
  *     [6, 4, 7, 9, 7, 8, 2, 4, 3], 7 --> 2
  *
- *     Time Complexity:
- *     Auxiliary Space Complexity:
+ *     Time Complexity: O(n)
+ *     Auxiliary Space Complexity: O(1)
+ 
+ Grade +2
  */
 
 function indexOf(arr, target) {
@@ -74,8 +78,10 @@ function indexOf(arr, target) {
  *     [9, 83, 74] --> [74]
  *     [6, 4, 7, 9, 7, 8, 2, 4, 3] --> [6, 4, 8, 2, 4]
  *
- *     Time Complexity:
- *     Auxiliary Space Complexity:
+ *     Time Complexity: O(n)
+ *     Auxiliary Space Complexity: O(n)
+ 
+ Grade: +2
  */
 
 function evens(arr) {
@@ -102,8 +108,10 @@ function evens(arr) {
  *    [0, 1, -1] --> 0
  *    [] --> 0
  *
- *    Time Complexity:
- *    Auxiliary Space Complexity:
+ *    Time Complexity: O(n)
+ *    Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function sum(arr) {
@@ -129,8 +137,10 @@ function sum(arr) {
  *   [12, 25, 40], [20, 37, 45] --> [12, 20, 25, 37, 40, 45]
  *   [10, 13, 24], [12, 35] --> [10, 12, 13, 24, 35]
  *
- *   Time Complexity:
- *   Auxiliary Space Complexity:
+ *   Time Complexity: O(n + m)
+ *   Auxiliary Space Complexity: O(n + m)
+ 
+ Grade: +2
  */
 
 function merge(arr1, arr2) {
@@ -166,8 +176,10 @@ function merge(arr1, arr2) {
  *    [5, 7, 10, 12, 14], 7 --> 1
  *    [2, 4, 8, 9, 15], 3 --> -1
  *
- *   Time Complexity:
- *   Auxiliary Space Complexity:
+ *   Time Complexity: O(log n)
+ *   Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function binarySearch(arr, val) {
@@ -200,8 +212,11 @@ function binarySearch(arr, val) {
  *    1 --> 1 (1)
  *    9 --> 362880 (9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1)
  *
- *    Time Complexity:
- *    Auxiliary Space Complexity:
+ *    Time Complexity: O(n)
+ *    Auxiliary Space Complexity: O(n!)
+ 
+ Grade: +1 
+ Notes: the aux space is O(n). It is still evenly based on the size of the input.
  */
 
 function factorial(n) {
@@ -214,8 +229,10 @@ function factorial(n) {
 /*
  *  First Times Last
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(1)
+ *  Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function firstTimesLast(arr) {
@@ -231,8 +248,11 @@ function firstTimesLast(arr) {
  *  Most Frequent Occurrence
  *  NOTE: The string only contains letters in it
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n)
+ *  Auxiliary Space Complexity: O(n)
+ 
+ Grade: +1 
+ Notes: the aux space is O(1) assuming 26 letters in the alphabet. Makes since because once it is defined, it will never get larger than that.
  */
 
 function mostFrequentOccurrence(str) {
@@ -261,8 +281,10 @@ function mostFrequentOccurrence(str) {
 /*
  *  Print Unordered Pairs
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n^2)
+ *  Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function printUnorderedPairs(array) {
@@ -276,8 +298,11 @@ function printUnorderedPairs(array) {
 /*
  *  Make Combined Matrix
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n * m)
+ *  Auxiliary Space Complexity: O(n + m)
+ 
+ Grade: +1 
+ Notes: the aux space is also O(MN)
  */
 
 function makeCombinedMatrix(arr1, arr2) {
@@ -297,8 +322,11 @@ function makeCombinedMatrix(arr1, arr2) {
 /*
  *  Nth Fibonacci
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n)
+ *  Auxiliary Space Complexity: O(1)
+ 
+ Grade: +1
+ Notes: the aux space is O(n). I didn't take into account the array within the function. I was focused on that return.
  */
 function nthFibonacci(n) {
   let result = [0, 1];
@@ -311,8 +339,10 @@ function nthFibonacci(n) {
 /*
  *  Nth Fibonacci - the return
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n)
+ *  Auxiliary Space Complexity: O(n)
+ 
+ Grade: +2
  */
 
 function nthFibonacci(n) {
