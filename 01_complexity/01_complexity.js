@@ -231,8 +231,8 @@ function firstTimesLast(arr) {
  *  Most Frequent Occurrence
  *  NOTE: The string only contains letters in it
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n)
+ *  Auxiliary Space Complexity: O(n)
  */
 
 function mostFrequentOccurrence(str) {
