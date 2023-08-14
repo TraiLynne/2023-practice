@@ -276,8 +276,8 @@ function printUnorderedPairs(array) {
 /*
  *  Make Combined Matrix
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n * m)
+ *  Auxiliary Space Complexity: O(n + m)
  */
 
 function makeCombinedMatrix(arr1, arr2) {
