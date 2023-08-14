@@ -297,8 +297,8 @@ function makeCombinedMatrix(arr1, arr2) {
 /*
  *  Nth Fibonacci
  *
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ *  Time Complexity: O(n)
+ *  Auxiliary Space Complexity: O(1)
  */
 function nthFibonacci(n) {
   let result = [0, 1];
