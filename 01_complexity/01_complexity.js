@@ -25,6 +25,8 @@ Reduce the following into it's Big-O order of magnitude.
 9. N! + 180000N^2           Answer: O(n!)
 10. 15002^N                 Answer: O(c^n)
 
+Grade: +10
+
 */
 
 /*
@@ -49,6 +51,8 @@ Reduce the following into it's Big-O order of magnitude.
  *
  *     Time Complexity: O(n)
  *     Auxiliary Space Complexity: O(1)
+ 
+ Grade +2
  */
 
 function indexOf(arr, target) {
@@ -76,6 +80,8 @@ function indexOf(arr, target) {
  *
  *     Time Complexity: O(n)
  *     Auxiliary Space Complexity: O(n)
+ 
+ Grade: +2
  */
 
 function evens(arr) {
@@ -104,6 +110,8 @@ function evens(arr) {
  *
  *    Time Complexity: O(n)
  *    Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function sum(arr) {
@@ -131,6 +139,8 @@ function sum(arr) {
  *
  *   Time Complexity: O(n + m)
  *   Auxiliary Space Complexity: O(n + m)
+ 
+ Grade: +2
  */
 
 function merge(arr1, arr2) {
@@ -168,6 +178,8 @@ function merge(arr1, arr2) {
  *
  *   Time Complexity: O(log n)
  *   Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function binarySearch(arr, val) {
@@ -202,6 +214,10 @@ function binarySearch(arr, val) {
  *
  *    Time Complexity: O(n)
  *    Auxiliary Space Complexity: O(n!)
+ 
+ Grade: +1 
+ 
+ Notes: the aux space is O(n). It is still evenly based on the size of the input.
  */
 
 function factorial(n) {
@@ -216,6 +232,8 @@ function factorial(n) {
  *
  *  Time Complexity: O(1)
  *  Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function firstTimesLast(arr) {
@@ -233,6 +251,9 @@ function firstTimesLast(arr) {
  *
  *  Time Complexity: O(n)
  *  Auxiliary Space Complexity: O(n)
+ 
+ Grade: +1 
+ Notes: the aux space is O(1) assuming 26 letters in the alphabet. Makes since because once it is defined, it will never get larger than that.
  */
 
 function mostFrequentOccurrence(str) {
@@ -263,6 +284,8 @@ function mostFrequentOccurrence(str) {
  *
  *  Time Complexity: O(n^2)
  *  Auxiliary Space Complexity: O(1)
+ 
+ Grade: +2
  */
 
 function printUnorderedPairs(array) {
@@ -278,6 +301,8 @@ function printUnorderedPairs(array) {
  *
  *  Time Complexity: O(n * m)
  *  Auxiliary Space Complexity: O(n + m)
+ 
+ Grade: +1 (the aux space is also O(MN))
  */
 
 function makeCombinedMatrix(arr1, arr2) {
@@ -299,6 +324,9 @@ function makeCombinedMatrix(arr1, arr2) {
  *
  *  Time Complexity: O(n)
  *  Auxiliary Space Complexity: O(1)
+ 
+ Grade: +1
+ Notes: the aux space is O(n). I didn't take into account the array within the function. I was focused on that return.
  */
 function nthFibonacci(n) {
   let result = [0, 1];
@@ -313,6 +341,8 @@ function nthFibonacci(n) {
  *
  *  Time Complexity: O(n)
  *  Auxiliary Space Complexity: O(n)
+ 
+ Grade: +2
  */
 
 function nthFibonacci(n) {
