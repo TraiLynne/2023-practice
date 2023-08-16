@@ -28,7 +28,19 @@
 'use strict';
 
 function unique(arr) {
-  // YOUR WORK HERE
+  const fc = {};
+  const result = []
+  
+  for(let i = 0 ; i < arr.length ; i++){
+   if(fc[arr[i]]){
+    fc[arr[i]]++
+   } else {
+    fc[arr[i]] = 1
+    result.push(arr[i])
+   }    
+  }
+  
+  return result
 }
 
 
