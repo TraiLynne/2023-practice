@@ -70,7 +70,22 @@ function unique(arr) {
  */
 
 function wordCount(sentence) {
-  // YOUR WORK HERE
+  let fc = {};
+
+  if (sentence.length < 1) {
+    return fc;
+  }
+
+  sentence
+    .toLowerCase()
+    .split(" ")
+    .forEach((word) => {
+      word = word.replace(/[^0-9a-z]/gi, "");
+
+      fc[word] ? fc[word]++ : (fc[word] = 1);
+    });
+
+  return fc;
 }
 
 
