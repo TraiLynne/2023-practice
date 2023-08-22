@@ -111,7 +111,23 @@ function wordCount(sentence) {
  */
 
 function rgb(string) {
-  // YOUR WORK HERE
+  let fc = {
+    r: 0,
+    g: 0,
+    b: 0,
+  };
+
+  if (string.length < 3) {
+    return 0;
+  }
+
+  string.split("").forEach((letter) => fc[letter]++);
+
+  return fc["r"] <= fc["g"] && fc["r"] <= fc["b"]
+    ? fc["r"]
+    : fc["g"] <= fc["r"] && fc["g"] <= fc["b"]
+    ? fc["g"]
+    : fc["b"];
 }
 
 
