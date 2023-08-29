@@ -154,7 +154,22 @@ function rgb(string) {
  */
 
 function missingNumber(n, arr) {
-  // YOUR WORK HERE
+  let result = [];
+  let fc = {}
+
+  for(let i = 1 ; i <= n ; i++){
+    fc[i] = 0
+  }
+
+  arr.forEach(i => fc[i]++);
+
+  for(let key in fc){
+    if (fc[key] === 0){
+      result.push(parseInt(key))
+    } 
+  }
+
+  return result;
 }
 
 
