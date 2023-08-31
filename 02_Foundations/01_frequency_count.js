@@ -427,7 +427,18 @@ function anagramPair(string1, string2) {
 
 
  function anagramPalindrome(string) {
-   // YOUR WORK HERE
+  let result = true;
+  let i = 0;
+  let j = string.length - 1;
+  while(i < string.length && j >= 0 && result === true){
+    console.log(`i = ${i} = ${string[i]}, j = ${j} = ${string[j]}, result = ${result}`)
+    string[i] === string [j] ? result = true : result = false;
+    i++
+    j--
+    console.log(`i = ${i} = ${string[i]}, j = ${j} = ${string[j]}, result = ${result}`)
+  }
+
+  return result;
  }
 
 
