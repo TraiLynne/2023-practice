@@ -239,7 +239,29 @@ function letterSort(string) {
  */
 
  function characterMode(string) {
-   // YOUR WORK HERE
+  let keys = ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
+  const fc = keys.reduce((accumulator, value) => {
+    return {...accumulator, [value]: 0};
+  }, {});
+  let highest = 1;
+  let result = ""
+  
+  string.replace(/[^a-zA-Z0-9]/g,'').split('').forEach(i => fc[i.toLowerCase()]++)
+
+ for(let key in fc){
+   
+   if(fc[key] === highest){
+     result += key
+   }
+
+   if (fc[key] > highest) {
+     highest = fc[key]
+     result = key
+   }
+  }
+
+  return result;
+
  }
 
 
