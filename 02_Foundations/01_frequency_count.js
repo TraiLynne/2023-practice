@@ -290,7 +290,26 @@ function letterSort(string) {
 
 
 function sortDigits(n) {
-  // YOUR WORK HERE
+  let keys = [1,2,3,4,5,6,7,8,9,0 ];
+  const fc = keys.reduce((accumulator, value) => {
+    return {...accumulator, [value]: 0};
+  }, {});
+  let result = ""
+
+  n = `${n}`.split("").forEach(i => fc[i]++);
+
+
+  for(let key in fc){
+    if(key != "0" && fc[key] !== 0){
+      for(let i = fc[key] ; i > 0 ; i--){
+
+        result += key
+
+      }
+    }
+  }
+
+  return parseInt(result)
 }
 
 
