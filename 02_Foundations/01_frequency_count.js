@@ -379,7 +379,22 @@ function getDuplicates(arr) {
  */
 
 function anagramPair(string1, string2) {
-  // YOUR WORK HERE
+  let result = true;
+  let fc = {}
+  if(string1.length !== string2.length){return false;}
+
+  for(let i = 0 ; i < string1.length ; i ++){
+    !fc[string1[i]] ? fc[string1[i]] = [1, 0] : fc[string1[i]][0]++
+    !fc[string2[i]] ? fc[string2[i]] = [0, 1] : fc[string2[i]][1]++
+  }
+
+  
+  for(let key in fc){
+    if(result === false){break;}
+    if(fc[key][0] !== fc[key][1]){result = false}
+  }
+
+  return result;
 }
 
 
