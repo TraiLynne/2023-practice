@@ -335,7 +335,21 @@ function sortDigits(n) {
  */
 
 function getDuplicates(arr) {
-  // YOUR WORK HERE
+  let fc = {}
+  let result = []
+
+  arr.forEach(i => {
+    if (!fc[i]){
+      fc[i] = [1, i]
+    } else {
+      fc[i][0]++
+      if(fc[i][0] === 2){
+        result.push(fc[i][1])
+      }
+    }
+  })
+  
+  return result;
 }
 
 
